@@ -53,9 +53,16 @@ h1{
     animation: drive 3s both infinite linear,
             jump .3s 1.2s ease ;
 }
+.cloud{
+    animation: cloud 100s both infinite linear;
+    position: absolute;
+}
+.sky h1{
+    position: absolute;
+}
 .luigi{
     position: absolute;
-    top: 90px;
+    top: 70px;
     left: 0;
     animation-name: drive;
     animation-duration: 4s;
@@ -74,6 +81,12 @@ h1{
     }
 }
 @keyframes cloud{
+    from{
+        transform: translateX(-800px);
+    }
+    to{
+        transform:translateX(1000px) ;
+    }
 
 }
 @keyframes jump{
@@ -85,5 +98,16 @@ h1{
     }
     100%{
         top: -40px;
+    }
+}
+@media (max-width: 500px){
+    @keyframes cloud{
+        from{
+            transform: translateX(30px);
+        }
+        to{
+            transform:translateX(800px) ;
+        }
+    
     }
 }
